@@ -1,0 +1,61 @@
+<div class="wrapper-profile">
+  <div class="left">
+    <div class="item">
+      <span>User sign</span>
+      <span>
+        <img src="./img/<%= user.sign_img %>">
+      </span>
+    </div>
+    <div class="item">
+        <h3 class="title">Personal</h3>
+        <div class="info">
+          <span><i class="bi bi-person-vcard"></i></span>
+          <div class="detail">
+            <span>Username</span>
+            <span><%= user.username %></span>
+          </div>
+        </div>
+        <div class="info">
+          <span><i class="bi bi-envelope"></i></span>
+          <div class="detail">
+            <span>Email</span>
+            <span><%= user.email %></span>
+          </div>
+        </div>
+        <div class="info">
+          <span><i class="bi bi-eye-slash"></i></span>
+          <div class="detail">
+            <span>Password</span>
+            <span>*************</span>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="item">
+      <form action="/edit-profile" method="post" enctype="multipart/form-data">
+        <div class="form-item mb-3">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-item mb-4">
+            <input type="file" name="sign_img" class="form-control" id="sign_img">
+        </div>
+        <div class="form-item form-button">
+            <button type="submit" class="btn-submit">Save</button>
+        </div>
+      </form>
+      <form action="/change-password" method="post">
+        <h3 class="title">Change Password</h3>
+        <div class="form-item mb-3">
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="form-item mb-3">
+            <input type="password" name="newPassword" class="form-control" id="newPassword" placeholder="New password">
+        </div>
+        <div class="form-item form-button">
+            <button type="submit" class="btn-submit">Change</button>
+        </div>
+    </form>
+    </div>
+  </div>
+</div>

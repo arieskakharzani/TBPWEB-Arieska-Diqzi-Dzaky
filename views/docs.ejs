@@ -1,0 +1,62 @@
+<div class="wrapper-table-docs">
+  <h3 class="title">Request docs</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Deskripsi</th>
+          <th>jabatan</th>
+          <th>status</th>
+          <th>Tanggal dikirim</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% documents.forEach(document => { %>
+          <tr>
+            <td><%= document.name %></td>
+            <td><%= document.description %></td>
+            <td><%= document.jabatan %></td>
+            <td><%= document.status %></td>
+            <td><%= moment(document.created_at).format('LL') %></td>
+            <td>
+              <a href="/download/<%= document.document_id %>" class="btn-download">Download</a>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+<div class="mt-5 wrapper-table-docs">
+  <h3 class="title">Your docs</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Filename</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% yourDocs.forEach(document => { %>
+          <tr>
+            <td><%= document.name %></td>
+            <td><%= document.description %></td>
+            <td>
+              <%
+            var fileName = document.filename;
+            var result = fileName.substring(fileName.indexOf('-') + 1);
+            %>
+            <%= result %>
+            </td>
+            <td><%= moment(document.created_at).format('LL') %></td>
+            <td>
+              <a href="/download/<%= document.document_id %>" class="btn-download">Download</a>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
