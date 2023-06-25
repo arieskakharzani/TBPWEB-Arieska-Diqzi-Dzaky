@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Mulish:wght@300;400;500;600;700&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+.auth-wrapper{
+    width:100%;
+    height:100vh;
+    display:flex;
+    place-content: center;
+    background: #1e293b;
+}
+
+.auth-wrapper .center{
+    width:60%;
+    padding:40px 100px 30px 100px;
+}
+
+.auth-wrapper .center .form-container{
+    width: 100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    background-color: #475569;
+    border-radius:20px;
+}
+
+.title{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: center;
+    margin-bottom:50px;
+}
+
+.title h1{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  color:#cbd5e1;
+}
+
+.title p{
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 15px;
+  color:#D3E6FE;
+}
+
+form{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+form .form-item{
+    display:flex;
+    flex-direction: column;
+}
+form .form-button{
+    justify-content: center;
+    align-items: center;
+    gap:12px;
+}
+
+.btn-submit{
+    width: 340px;
+    height: 38px;
+    border:0;
+    background: #2563eb;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    color:#cbd5e1;
+    transition: .2s;
+    margin-top:20px;
+    margin-bottom:28px;
+}
+
+.btn-submit:hover{
+    background: #173f97;
+
+}
+
+.form-button p a{
+    text-decoration: none;
+    color:#2563eb;
+    margin-left:5px;
+}
+.form-button p a:hover{
+    color:#1d4eb8;
+}
+
+
+form .form-item input{
+    width: 340px;
+    height: 43px;
+    background: transparent;
+    border:0;
+    border-bottom: 1px solid #cbd5e1 ;
+    font-weight: 400;
+    font-size: 18px;
+    outline: none;
+    color:#cbd5e1;
+}
+
+input::placeholder{
+  font-weight: 400;
+  font-size: 14px;
+  color: #cbd5e1;
+  opacity: 0.9;
+    
+}
+
