@@ -1,0 +1,64 @@
+<h1 class="mt-5" style="color:#D3E6FE;">Request Sign</h1>
+<p></p>
+<p></p>
+<form class="form-req-sign"action="/add-req-sign" method="post" enctype="multipart/form-data">
+  <div class="wrap-file-drop">
+    <div class="mb-3 outlier-file-drop">
+      <div class="file-drop">
+        <input type="file" name="filename" id="file-input" multiple>
+        <label for="file-input" class="file-label">
+          <span><i class="bi bi-cloud-upload"></i></span>
+          <span>Click to upload</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  
+  <div class="wrapper-penerima">
+    <div class="mb-3">
+      <label for="name" class="form-label">To user</label>
+      <select name="user_id" class="form-control input" id="selectUser">
+        <option value="">Choose user...</option>
+        <% users.forEach(function(user) { %>
+          <option value="<%= user.user_id %>"><%= user.username %></option>
+        <% }); %>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="dokumen" class="form-label">Nama dokumen</label>
+      <input type="text" class="form-control input" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Deskripsi</label>
+      <textarea type="text" class="form-control input" id="description" name="description" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="jabatan" class="form-label">jabatan</label>
+      <input type="text" class="form-control input" id="jabatan" name="jabatan" required>
+    </div>
+    <div class="mb-3">
+      <label for="status" class="form-label">status</label>
+      <input type="text" class="form-control input" id="status" name="status" required>
+    </div>
+    <button type="submit" class="btn-submit mt-3">Kirim</button>
+  </div>
+</form>
+
+<h1 class="mt-5" style="color:#D3E6FE;">Your Documents</h1>
+<form class="form-req-sign mt-5"action="/add-your-docs" method="post" enctype="multipart/form-data">
+  <div class="wrapper-penerima">
+    <div class="mb-3">
+      <label for="dokumen" class="form-label">Nama dokumen</label>
+      <input type="text" class="form-control input" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Deskripsi</label>
+      <textarea type="text" class="form-control input" id="description" name="description" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="filename" class="form-label">Filename</label>
+      <input type="file" class="form-control input" id="filename" name="filename" required>
+    </div>
+    <button type="submit" class="btn-submit mt-3">Kirim</button>
+  </div>
+</form>

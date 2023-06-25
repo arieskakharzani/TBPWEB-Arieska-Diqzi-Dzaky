@@ -1,0 +1,15 @@
+<div class="wrapper-home">
+  <div class="info">
+    <div class="item">
+      <span>Total users</span>
+      <span>
+        <% let totalUser = -1; %>
+        <% users.forEach(user => { %>
+          <% totalUser += user.user_id; %>
+        <% }); %>
+
+        <%= totalUser %>
+      </span>
+    </div>
+  </div>
+</div>
